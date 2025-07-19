@@ -23,11 +23,11 @@ This code is supplementary material that can be used to reproduce our findings.
 ├── reference_files.txt     # List of reference genome files
 ├── environment.yml         # Conda environment definition
 ├── metadata.csv            # Sample metadata on mouse samples
-├── scripts/                # Bash scripts
 ├── lncrna.csv              # GTF output of Cuffmerge (all lncRNAs captured by RNA-Seq among all 64 mice)
-├── de_seq.Rmd/             # R markdown document for DESeq
-├── supplementary_material/ # Supplementary Figures S1-3 and Supplementary Table T1
+├── de_seq.Rmd              # R markdown document for DESeq
 └── README.md               # This file
+├── scripts/                # Bash scripts
+├── supplementary_material/ # Supplementary Figures S1-3 and Supplementary Table T1
 ```
 
 ## Getting Started
