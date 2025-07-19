@@ -19,6 +19,7 @@ We implemented a complete RNA-seq analysis pipeline including:
 This code is supplementary material that can be used to reproduce our findings.
 
 ## Repository Structure
+```text
 ├── reference_files.txt     # List of reference genome files
 ├── environment.yml         # Conda environment definition
 ├── metadata.csv            # Sample metadata on mouse samples
@@ -27,6 +28,7 @@ This code is supplementary material that can be used to reproduce our findings.
 ├── de_seq.Rmd/             # R markdown document for DESeq
 ├── supplementary_material/ # Supplementary Figures S1-3 and Supplementary Table T1
 └── README.md               # This file
+```
 
 ## Getting Started
 
