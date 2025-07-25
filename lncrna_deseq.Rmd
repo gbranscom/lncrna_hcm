@@ -184,10 +184,21 @@ select <- order(rowMeans(counts(dds.genes.individual,normalized=TRUE)),
                 decreasing=TRUE)[1:40] # only include the top 40 genes
 df <- as.data.frame(colData(dds.genes.individual)[,c("genotype", "exercise", "sex")])
 pheatmap(assay(vsd.genes.individual)[select,], cluster_rows=FALSE, show_rownames=FALSE,
-         cluster_cols=FALSE, annotation_col=df, fontsize_col=6,
+         cluster_cols=FALSE, annotation_col=df, fontsize_col=6, scale="row",
          main="heatmap of count matrix:\n top 40 counts for each sample - variance stabilizing stabilization")
 
 # PCA
+gene_var <- rowVars(assay(vsd.genes.individual))
+top_var_genes <- order(gene_var, decreasing = TRUE)[1:500]
+tr <- t(assay(results)[top_var_genes, ])
+pca <- prcomp(tr)
+names <- names(pca)
+loadings <- pca$rotation
+values <- pca$x
+pve <- summary(pca)$importance[2, ]
+pc1_var <- round(pve[1] * 100, 2)
+pc2_var <- round(pve[2] * 100, 2)
+
 # colored by genotype
 pca.genotype <- as.data.frame(pca$x) %>% 
   ggplot(aes(x=PC1, y=PC2)) +
