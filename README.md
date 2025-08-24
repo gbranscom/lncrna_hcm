@@ -1,10 +1,8 @@
 # lncrna_hcm
 
-Supplementary code C1 for the manuscript: "Investigating the role of long non-coding RNA in hypertrophic cardiomyopathy"
+Supplementary code and files for the manuscript: "Long non-coding RNA profiling of hypertrophic cardiomyopathy in mice"
 
 > Paper citation TBD
-
-Supplementary Figures S1-3 and Supplementary Table T1 are also found here.
 
 ## Overview
 
@@ -14,7 +12,6 @@ We implemented a complete RNA-seq analysis pipeline including:
 - **Read alignment** with `STAR`
 - **Transcript assembly and quantification** with `Cufflinks` and `RSEM`
 - **Differential expression (DE) analysis** using `DESeq2` in R
-- **Prediction of lncRNA-encoded micropeptides** using `MiPepid` and `AlphaFold2`
 
 This code is supplementary material that can be used to reproduce our findings.
 
@@ -58,7 +55,6 @@ star.sh # 2. Genome alignment
 cufflinks.sh # 3. Transcript assembly
 rsem.sh # 4. Count matrix generation
 lncrna_deseq.R # 5. Differential expression analysis
-micropeptide.sh # 6. Micropeptide prediction
 ```
 
 Information on the human DE analysis can be found in
