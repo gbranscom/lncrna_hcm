@@ -4,6 +4,8 @@ Supplementary code and files for the manuscript: "Long non-coding RNA profiling 
 
 > Paper citation TBD
 
+RNA-Seq files and accompanying data can be found at GSE297707.
+
 ## Overview
 
 We implemented a complete RNA-seq analysis pipeline including:
@@ -20,7 +22,8 @@ This code is supplementary material that can be used to reproduce our findings.
 ├── reference_files.txt     # List of reference genome files
 ├── environment.yml         # Conda environment definition
 ├── metadata.csv            # Sample metadata on mouse samples
-├── lncrna.csv              # GTF output of Cuffmerge (all lncRNAs captured by RNA-Seq among all 64 mice)
+├── full_lncrna.csv         # GTF output of Cuffmerge (all lncRNAs captured by RNA-Seq among all 64 mice)
+├── all_lncrna_genes.xlsx   # (Generated after DE-Seq) All lncRNA genes with p-value, p-adj, log2FC, and human ortholog data
 ├── de_seq.Rmd              # R markdown document for DESeq
 └── README.md               # This file
 ├── scripts/                # Bash scripts
